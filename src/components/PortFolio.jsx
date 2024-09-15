@@ -13,25 +13,29 @@ function PortFolio() {
       id: 1,
       logo: currencyConverter,
       name: "Currency Converter",
-      source: "https://github.com/Nitesh3423/React_Projects/tree/main/currencyConverter/my-project"
+      source: "https://github.com/Nitesh3423/React_Projects/tree/main/currencyConverter/my-project",
+      link: "https://currency-converter-seven-black.vercel.app/"
     },
     {
       id: 2,
       logo: passwordGenerator,
       name: "Password Generator",
-      source: "https://github.com/Nitesh3423/React_Projects/tree/main/PasswordGenerator/05passwordGenerator"
+      source: "https://github.com/Nitesh3423/React_Projects/tree/main/PasswordGenerator/05passwordGenerator",
+      link :"https://password-generator-gamma-green.vercel.app/"
     },
     {
       id: 3,
       logo: Todo,
       name: "To do List",
-      source: "https://github.com/Nitesh257/Todo_list"
+      source: "https://github.com/Nitesh257/Todo_list",
+      link:"https://todo-list-inky-five-91.vercel.app/"
     },
     {
       id: 4,
       logo: blog,
       name: "Blog App",
-      source: "https://github.com/Nitesh3423/Youtube_Backend"
+      source: "https://github.com/Nitesh3423/Youtube_Backend",
+      link:"https://blog-app-git-main-niteshs-projects-9130057b.vercel.app/"
     }
   ];
   return (
@@ -61,7 +65,7 @@ function PortFolio() {
               </div>
               <div className=" px-6 py-4 space-x-3 justify-around">
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded">
-                  Video
+                  <a href={link}>Link</a>
                 </button>
                 <button className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded">
                   <a href={source}>Source Code</a>

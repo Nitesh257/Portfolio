@@ -49,7 +49,7 @@ function Home() {
                 <h1 className="font-bold text-center ">Profiles</h1>
                 <ul className="flex space-x-5">
                   <li>
-                    <a href="https://leetcode.com/u/Nitesh078/" target="_blank">
+                    <a href="https://leetcode.com/" target="_blank">
                       <SiLeetcode className="text-2xl cursor-pointer" />
                     </a>
                   </li>

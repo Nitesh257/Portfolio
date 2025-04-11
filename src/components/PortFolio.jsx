@@ -34,8 +34,8 @@ function PortFolio() {
       id: 4,
       logo: blog,
       name: "Blog App",
-      source: "https://github.com/Nitesh3423/Youtube_Backend",
-      link:"https://blog-app-git-main-niteshs-projects-9130057b.vercel.app/"
+      source: "https://github.com/Nitesh257/BlogBackend",
+      link:"https://blog-frontend-ruby-chi.vercel.app/"
     }
   ];
   return (

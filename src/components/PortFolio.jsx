@@ -1,73 +1,82 @@
-import React from "react";
-import java from "../../public/java.png";
-import python from "../../public/python.webp";
-import currencyConverter from "../../public/currencyConverter.png"
-import passwordGenerator from "../../public/passwordGenerator.png"
-import Todo from "../../public/Todo.png"
-import blog from "../../public/blog.png"
+/* eslint-disable no-unused-vars */
 
+import React from "react";
+import currencyConverter from "../../public/currencyConverter.png";
+import passwordGenerator from "../../public/passwordGenerator.png";
+import Todo from "../../public/Todo.png";
+import blog from "../../public/blog.png";
+import chat from "../../public/chat.png"
 
 function PortFolio() {
   const cardItem = [
+    {
+      id: 4,
+      logo: blog,
+      name: "Blog App",
+      source: "https://github.com/Nitesh257/BlogBackend",
+      link: "https://blog-frontend-ruby-chi.vercel.app/",
+    },
+    {
+      id:5,
+      logo:chat,
+      name:"Realtime Chat-App",
+      source:"https://github.com/Nitesh257/chat-app",
+      link:"https://chat-app-8r9n.onrender.com/"
+    
+    },
     {
       id: 1,
       logo: currencyConverter,
       name: "Currency Converter",
       source: "https://github.com/Nitesh3423/React_Projects/tree/main/currencyConverter/my-project",
-      link: "https://currency-converter-seven-black.vercel.app/"
+      link: "https://currency-converter-seven-black.vercel.app/",
     },
     {
       id: 2,
       logo: passwordGenerator,
       name: "Password Generator",
       source: "https://github.com/Nitesh3423/React_Projects/tree/main/PasswordGenerator/05passwordGenerator",
-      link :"https://password-generator-gamma-green.vercel.app/"
+      link: "https://password-generator-gamma-green.vercel.app/",
     },
     {
       id: 3,
       logo: Todo,
       name: "To do List",
       source: "https://github.com/Nitesh257/Todo_list",
-      link:"https://todo-list-inky-five-91.vercel.app/"
+      link: "https://todo-list-inky-five-91.vercel.app/",
     },
-    {
-      id: 4,
-      logo: blog,
-      name: "Blog App",
-      source: "https://github.com/Nitesh257/BlogBackend",
-      link:"https://blog-frontend-ruby-chi.vercel.app/"
-    }
   ];
+
   return (
     <div
       name="Portfolio"
-      className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10"
+      className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10 dark:bg-gray-900 dark:text-white"
     >
       <div>
         <h1 className="text-3xl font-bold mb-5">PortFolio</h1>
-        <span className=" underline font-semibold">Featured Projects</span>
+        <span className="underline font-semibold">Featured Projects</span>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-3 my-5">
-          {cardItem.map(({ id, logo, name ,source,link}) => (
+          {cardItem.map(({ id, logo, name, source, link }) => (
             <div
-              className="md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-1 cursor-pointer hover:scale-110 duration-300"
+              className="md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-1 cursor-pointer hover:scale-110 duration-300 dark:border-gray-700"
               key={id}
             >
               <img
                 src={logo}
-                className="w-[120px] h-[120px] p-1 rounded-full border-[2px]"
-                alt=""
+                className="w-[120px] h-[120px] p-1 rounded-full border-[2px] dark:border-gray-600"
+                alt={name}
               />
               <div>
                 <div className="px-2 font-bold text-xl mb-2">{name}</div>
-                <p className="px-2 text-gray-700">
-                  Simple {name} 
+                <p className="px-2 text-gray-700 dark:text-gray-300">
+                  Simple {name}
                 </p>
               </div>
-              <div className=" px-6 py-4 space-x-3 justify-around">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded">
+              <div className="px-6 py-4 space-x-3 justify-around">
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded dark:bg-blue-600 dark:hover:bg-blue-700">
                   <a href={link}>Link</a>
                 </button>
-                <button className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded">
+                <button className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded dark:bg-green-600 dark:hover:bg-green-700">
                   <a href={source}>Source Code</a>
                 </button>
               </div>

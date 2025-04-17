@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
@@ -38,26 +39,33 @@ function Contact() {
             onSubmit={handleSubmit(onSubmit)}
             // action="https://getform.io/f/raeqjora"
             // method="POST"
-            className="bg-slate-200 w-96 px-8 py-6 rounded-xl"
+            className="bg-white dark:bg-gray-800 shadow-xl w-full md:w-[500px] px-8 py-6 rounded-2xl space-y-4"
           >
-            <h1 className="text-xl font-semibold mb-4">Send Your Message</h1>
-            <div className="flex flex-col mb-4">
-              <label className="block text-gray-700">FullName</label>
+            <h1 className="text-xl font-semibold mb-4">Send Your Message</h1>{" "}
+            <h1 className="text-2xl font-bold text-center text-gray-800 dark:text-white">
+              Send Your Message
+            </h1>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                Full Name
+              </label>
               <input
                 {...register("name", { required: true })}
-                className="shadow rounded-lg appearance-none border  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Enter your fullname"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-400"
+                placeholder="Enter your full name"
               />
-              {errors.name && <span>This field is required</span>}
+              {errors.name && (
+                <span className="text-red-500 text-sm">
+                  This field is required
+                </span>
+              )}
             </div>
             <div className="flex flex-col mb-4">
-              <label className="block text-gray-700">Email Address</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address</label>
               <input
                 {...register("email", { required: true })}
-                className="shadow rounded-lg appearance-none border  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-400"    
+            
                 id="email"
                 name="email"
                 type="text"
@@ -66,10 +74,11 @@ function Contact() {
               {errors.email && <span>This field is required</span>}
             </div>
             <div className="flex flex-col mb-4">
-              <label className="block text-gray-700">Message</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
               <textarea
                 {...register("message", { required: true })}
-                className="shadow rounded-lg appearance-none border  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-400"
+                
                 id="message"
                 name="message"
                 type="text"

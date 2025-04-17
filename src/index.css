@@ -1,8 +1,75 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+  transition: background-color 0.5s ease;
+}
+
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #ffffff; /* Default light mode background */
+  color: #000000; /* Default light mode text color */
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark {
+  background-color: #1a202c; /* Dark mode background */
+  color: #e2e8f0; /* Dark mode text color */
+}
+
+/* Apply dark mode background and text to all major container classes */
+body.dark .bg-white {
+  background-color: #2d3748; /* Dark mode background for elements with bg-white */
+}
+
+body.dark .text-black {
+  color: #e2e8f0; /* Dark mode text color for elements with text-black */
+}
+
+body.dark .bg-gray-900 {
+  background-color: #1a202c; /* Dark mode background for elements with bg-gray-900 */
+}
+
+body.dark .bg-gray-100 {
+  background-color: #2d3748; /* Background change for gray bg elements */
+}
+
+body.dark .text-gray-700 {
+  color: #e2e8f0; /* Dark mode text color for elements with text-gray-700 */
+}
+
+/* Special case for fixed and sticky elements like navigation bars */
+body.dark .bg-gray-800 {
+  background-color: #2d3748; /* Dark mode background for navbars */
+}
+
+/* Dark mode utility classes */
+body.dark .bg-blue-500 {
+  background-color: #3182ce; /* Dark mode blue */
+}
+
+body.dark .bg-green-500 {
+  background-color: #38a169; /* Dark mode green */
+}
+
+body.dark .bg-red-500 {
+  background-color: #f56565; /* Dark mode red */
+}
+
+body.dark .bg-yellow-500 {
+  background-color: #ecc94b; /* Dark mode yellow */
+}
+
+/* Ensures all sections adjust for dark mode */
+body.dark .text-gray-500 {
+  color: #edf2f7; /* Dark mode gray text */
+}
+
+/* Add transition for smooth dark mode switch */
+body, html {
+  transition: background-color 0.5s ease, color 0.5s ease;
 }

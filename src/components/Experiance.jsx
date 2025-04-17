@@ -1,10 +1,12 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-unused-vars */
 import React from "react";
 import html from "../../public/html.png";
 import css from "../../public/css.jpg";
 import java from "../../public/java.png";
 import javascript from "../../public/javascript.png";
 import oracle from "../../public/oracle.png";
-import c from "../../public/c.png"
+import c from "../../public/c.png";
 
 function Experiance() {
   const cardItem = [
@@ -41,19 +43,17 @@ function Experiance() {
     >
       <div>
         <h1 className="text-3xl font-bold mb-5">Technology</h1>
-        <p className="  ">
-          I've experience in below technologies.
-        </p>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-7 my-3">
+        <p className="  ">I've experience in below technologies.</p>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-7 my-10">
           {cardItem.map(({ id, logo, name }) => (
             <div
-              className=" flex flex-col items-center justify-center border-[2px] rounded-full md:w-[200px] md:h-[200px] shadow-md p-1 cursor-pointer hover:scale-110 duration-300"
               key={id}
+              className="bg-white dark:bg-gray-900 p-4 rounded-2xl shadow-lg flex flex-col items-center hover:scale-105 transition duration-300"
             >
-              <img src={logo} className="w-[150px] rounded-full" alt="" />
-              <div>
-                <div className="">{name}</div>
-              </div>
+              <img src={logo} alt={name} className="w-20 h-20 object-contain" />
+              <p className="mt-3 font-semibold text-gray-700 dark:text-gray-200">
+                {name}
+              </p>
             </div>
           ))}
         </div>

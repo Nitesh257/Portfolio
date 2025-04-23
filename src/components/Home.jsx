@@ -68,12 +68,12 @@ function Home() {
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.codechef.com/users/hello_23456" target="_blank">
+                    <a href="https://codeforces.com/profile/Nitesh_6200" target="_blank">
                       <SiCodeforces className="text-2xl cursor-pointer text-black dark:text-white" />
                     </a>
                   </li>
                   <li>
-                    <a href="https://codeforces.com/profile/Nitesh_6200" target="_blank">
+                    <a href="https://github.com/Nitesh3423" target="_blank">
                       <BsGithub className="text-2xl cursor-pointer text-black dark:text-white" />
                     </a>
                   </li>

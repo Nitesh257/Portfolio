@@ -41,7 +41,6 @@ function Contact() {
             // method="POST"
             className="bg-white dark:bg-gray-800 shadow-xl w-full md:w-[500px] px-8 py-6 rounded-2xl space-y-4"
           >
-            <h1 className="text-xl font-semibold mb-4">Send Your Message</h1>{" "}
             <h1 className="text-2xl font-bold text-center text-gray-800 dark:text-white">
               Send Your Message
             </h1>

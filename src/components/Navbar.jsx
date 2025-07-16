@@ -25,6 +25,12 @@ function Navbar() {
     { id: 3, text: "Portfolio" },
     { id: 4, text: "Experience" },
     { id: 5, text: "Contact" },
+    {
+      id: 6,
+      text: "Resume",
+      external: true,
+      link: "https://drive.google.com/file/d/1wRrt01VUX9YYdbm2PfRZ4F6W_s0CYdJN/view?usp=sharing",
+    },
   ];
 
   return (
@@ -37,32 +43,48 @@ function Navbar() {
               <h1 className="font-semibold text-xl cursor-pointer text-black dark:text-white">
                 Nitesh
               </h1>
-              <p className="text-sm text-gray-600 dark:text-gray-300">Web Developer</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                Web Developer
+              </p>
             </div>
           </div>
 
           {/* desktop navbar */}
           <div className="flex items-center space-x-4">
             <ul className="hidden md:flex space-x-8">
-              {navItems.map(({ id, text }) => (
+              {navItems.map(({ id, text, external, link }) => (
                 <li
                   key={id}
                   className="hover:scale-105 duration-200 cursor-pointer text-black dark:text-white"
                 >
-                  <Link
-                    to={text}
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
-                    activeClass="active"
-                  >
-                    {text}
-                  </Link>
+                  {external ? (
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {text}
+                    </a>
+                  ) : (
+                    <Link
+                      to={text}
+                      smooth={true}
+                      duration={500}
+                      offset={-70}
+                      activeClass="active"
+                    >
+                      {text}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
             {/* Dark mode toggle visible on desktop */}
-            <button onClick={toggleDarkMode} className="hidden md:block text-black dark:text-white">
+            <button
+              onClick={toggleDarkMode}
+              className="hidden md:block text-black dark:text-white"
+            >
               {darkMode ? <BsSun size={20} /> : <BsMoon size={20} />}
             </button>
 
@@ -77,25 +99,38 @@ function Navbar() {
         {menu && (
           <div className="bg-white dark:bg-gray-900">
             <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl">
-              {navItems.map(({ id, text }) => (
+              {navItems.map(({ id, text, external, link }) => (
                 <li
                   key={id}
-                  className="hover:scale-105 duration-200 font-semibold cursor-pointer text-black dark:text-white"
+                  className="hover:scale-105 duration-200 cursor-pointer text-black dark:text-white"
                 >
-                  <Link
-                    onClick={() => setMenu(!menu)}
-                    to={text}
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
-                    activeClass="active"
-                  >
-                    {text}
-                  </Link>
+                  {external ? (
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {text}
+                    </a>
+                  ) : (
+                    <Link
+                      to={text}
+                      smooth={true}
+                      duration={500}
+                      offset={-70}
+                      activeClass="active"
+                    >
+                      {text}
+                    </Link>
+                  )}
                 </li>
               ))}
               {/* Dark mode toggle for mobile */}
-              <button onClick={toggleDarkMode} className="mt-4 text-black dark:text-white">
+              <button
+                onClick={toggleDarkMode}
+                className="mt-4 text-black dark:text-white"
+              >
                 {darkMode ? <BsSun size={24} /> : <BsMoon size={24} />}
               </button>
             </ul>

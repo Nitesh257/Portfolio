@@ -50,7 +50,7 @@ function App() {
         <Element name="about"> <Experiance /></Element>
         <Element name="about"> <Contact/></Element>
         <Element name="about"> <Footer/></Element>
-        <Footer />
+       
         </div>
       </div>
       <Toaster />
